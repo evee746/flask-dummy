@@ -1,4 +1,4 @@
 flask-dummy
 ===========
 
-Dummy flask app
+Dummy flask app, just for kicks.
