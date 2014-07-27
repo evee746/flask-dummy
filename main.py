@@ -7,5 +7,5 @@ Bootstrap(app)
 @app.route('/')
 def index():
 	return render_template('index.html',
-		location='Big Sur, CA',
-		date='Thursday 2014/07/23')
+		location='San Francisco, CA',
+		date='Sunday 2014/07/27')
