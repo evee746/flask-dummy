@@ -4,9 +4,14 @@
 
 {% block content %}
 <div class="container" style="text-align:center">
-  <h1>Everett is currently home</h1>
-  <p>Unless he's not</p>
-  <h4>{{date}}, {{hours}}</h4>
+  {% if away %}
+      <h1>Everett is away</h1>
+      <p>...getting into mischief.</p>
+  {% else %}
+      <h1>Everett is home!</h1>
+      <p>Give him a call, he misses you.</p>
+  {%endif%}
+  <h4>{{date}}, {{hours}} (Pacific)</h4>
 </div>
 {% endblock %}
 
