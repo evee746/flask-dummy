@@ -1,8 +1,15 @@
 from flask import render_template
 from app import app
 
+import datetime
+import pytz
+
+TZ = pytz.timezone('US/Pacific')
+
 @app.route('/')
 def index():
+	now = datetime.datetime.now(tz=pytz.utc).astimezone(TZ)
 	return render_template('index.html',
 		location='San Francisco, CA',
-		date='Sunday 2014/07/27')
+		date=now.strftime('%A, %B %d %Y'),
+		hours=now.strftime('%I:%M %p'))
