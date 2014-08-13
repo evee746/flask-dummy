@@ -4,14 +4,18 @@
 
 {% block content %}
 <div class="container" style="text-align:center">
-  {% if away %}
+  {% if everett_is == 'away' %}
       <h1>Everett is away</h1>
       <p>...getting into mischief.</p>
-  {% else %}
+  {% elif everett_is == 'home' %}
       <h1>Everett is home!</h1>
       <p>Give him a call, he misses you.</p>
+  {% else %}
+      <h1>Everett's location is a mystery.</h1>
+      <p>OK, he's probably right here eating a cookie, but his website is messed up for some reason.</p>
   {%endif%}
-  <h4>{{date}}, {{hours}} (Pacific)</h4>
+  <br>
+  <h4> {{date}}, {{hours}} (Pacific) </h4>
 </div>
 {% endblock %}
 
